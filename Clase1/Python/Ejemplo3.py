@@ -21,7 +21,7 @@ for numero in numeros:
 		numero_pares.append(numero)
 		
 animalitos = ['aardvark', 'cat', 'dog', 'opossum']
-animalitos_a = []
+animalitos_a = [] 
 for animalito in animalitos;
 	if animalito[0] in 'aeiou':
 		animalitos_a.append(animalito.title())
