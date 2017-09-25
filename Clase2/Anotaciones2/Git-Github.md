@@ -37,7 +37,7 @@ Vamos a empezar a trabajar con Git y GitHub. Para ello necesitamos:
 Una instalado todo el software en nuestro equipo y creada nuestra cuenta de GitHub podemos hacer lo siguiente:
 
 * Podemos trabajar en local y después subirlo a GitHub.
-* O podemos querer traernos un proyecto existente de Github a nuestro repositorio local.
+* O podemos querer traernos un proyecto existente de Github a nuestro repositorio local. 
 
 ### Trabajar en local para subirlo más adelante en GitHub
 
@@ -64,4 +64,3 @@ Una instalado todo el software en nuestro equipo y creada nuestra cuenta de GitH
    - git add <nombre>
    - git commit -m “Mensaje”
    - git push origin master
-
