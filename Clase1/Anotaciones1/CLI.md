@@ -151,5 +151,5 @@ rm -fr /home/respaldos
 Clear (de limpiar), es un sencillo comando que limpiara nuestra terminal por completo dejándola como recién abierta. Para ello ejecutamos:
 
 ```
-clear
+clear 
 ```
