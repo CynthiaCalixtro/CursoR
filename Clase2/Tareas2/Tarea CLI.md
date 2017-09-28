@@ -224,6 +224,7 @@
 	`pwd` Muestra la ruta donde nos encontramos actualmente: `/`.
 
 6. **Revisa el archivo *chipotle.tsv* dentro del repositorio del curso, en la carpeta donde se aloja esta tarea. Piensa un minuto en cómo se estructuran los datos. ¿Qué crees que significa cada columna? ¿Qué crees que significa cada fila?. Responde las siguientes preguntas.**
+
 	Guardamos el archivo **chipotle.tsv** de la siguiente manera:
 	```
 	cynthia@cca:~$ wget -O -  https://raw.githubusercontent.com/C-Lara/Curso-R/master/Lista-ejercicios/TareaR0/chipotle.tsv > chipotle.tsv 
@@ -258,6 +259,7 @@
 		El primer comando nos muestra en pantalla la cantidad de líneas en las cuales aparece el ítem *Chicken Burrito*, mientras que el segundo muestra la cantidad de líneas donde aparece el ítem *Steak Burrito*. Como el primer resultado (553) es mayor que el segundo (368) podemos decir que el burrito de pollo es más popular que el de carne.
 	
 	- **¿Los burritos de pollo tienen más frecuentemente frijoles negros o frijoles pintos?**
+	
 		Para averiguar esto veamos el resultado de cada comando especificado a continuación:
 		```
 		cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
@@ -281,5 +283,3 @@
 		```
 		grep -ir "dictionary" . | wc -l
 		```
-	
-	
