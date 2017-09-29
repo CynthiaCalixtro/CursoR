@@ -1,4 +1,4 @@
-﻿#***Lista de ejercicios***
+﻿# ***Lista de ejercicios***
 
 1.  **Experimenta con los siguientes comandos e interpreta los resultados:**
 
@@ -186,6 +186,7 @@
 	El numero que has ingresado es 32
 	```
 5. Prueba en secuencia los siguientes comandos y explica tus pasos.
+
 	`cd` Cambia al directorio `/home/cynthia`.
 
 	`pwd` Muestra la ruta donde nos encontramos actualmente: `/home/cynthia`.
@@ -223,6 +224,7 @@
 	`pwd` Muestra la ruta donde nos encontramos actualmente: `/`.
 
 6. **Revisa el archivo *chipotle.tsv* dentro del repositorio del curso, en la carpeta donde se aloja esta tarea. Piensa un minuto en cómo se estructuran los datos. ¿Qué crees que significa cada columna? ¿Qué crees que significa cada fila?. Responde las siguientes preguntas.**
+
 	Guardamos el archivo **chipotle.tsv** de la siguiente manera:
 	```
 	cynthia@cca:~$ wget -O -  https://raw.githubusercontent.com/C-Lara/Curso-R/master/Lista-ejercicios/TareaR0/chipotle.tsv > chipotle.tsv 
@@ -230,36 +232,42 @@
 	Podemos observar que el archivo consta de 4 columnas: `order_id` (el id de cada orden), `quantity` (representa la cantidad de cada ítem), `item_name`(nombre del ítem adquirido), `choice_description` (descripción de la elección) y el `item_price` (el precio del ítem).
 	Cada fila representa el ítem (cuántos de estos, el precio, ...) que se ha pedido en una determinada orden.
 	- **¿Cuántas órdenes aparecen en el archivo?**
+		
 		Aparecen 1834 órdenes.
+		
 	- **¿Cuántas líneas hay en este archivo?**
+	
 		Usamos el siguiente comando para ver cuantas líneas tiene el archivo.
-	```
-	cynthia@cca:~$ wc -l chipotle.tsv 
-	```
+		
+		```
+		cynthia@cca:~$ wc -l chipotle.tsv 
+		```
 		Hay 4623 líneas.
 		
 	- **¿Qué burrito es más popular, el de carne o pollo?**
-	Para averiguar esto veamos el resultado de cada comando especificado a continuación:
-	```
-	cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | wc -l
-	```
+	
+		Para averiguar esto veamos el resultado de cada comando especificado a continuación:
+		```
+		cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | wc -l
+		```
 		El resultado es 553.
-	```
-	cynthia@cca:~$ grep "Steak Burrito" chipotle.tsv | wc -l
-	```
+		```
+		cynthia@cca:~$ grep "Steak Burrito" chipotle.tsv | wc -l
+		```
 		El resultado es 368.
 		
 		El primer comando nos muestra en pantalla la cantidad de líneas en las cuales aparece el ítem *Chicken Burrito*, mientras que el segundo muestra la cantidad de líneas donde aparece el ítem *Steak Burrito*. Como el primer resultado (553) es mayor que el segundo (368) podemos decir que el burrito de pollo es más popular que el de carne.
 	
 	- **¿Los burritos de pollo tienen más frecuentemente frijoles negros o frijoles pintos?**
-	Para averiguar esto veamos el resultado de cada comando especificado a continuación:
-	```
-	cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
-	```
+	
+		Para averiguar esto veamos el resultado de cada comando especificado a continuación:
+		```
+		cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | grep "Black Beans" | wc -l
+		```
 		El resultado es 282.
-	```
-	cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | grep "Pinto Beans" | wc -l
-	```
+		```
+		cynthia@cca:~$ grep "Chicken Burrito" chipotle.tsv | grep "Pinto Beans" | wc -l
+		```
 		El resultado es 105.
 
 		El primer comando nos muestra en pantalla la cantidad de líneas en las cuales aparece *Black Beans* ("frijoles negros", en español) en las líneas donde aparece el ítem *Chicken Burrito*, mientras que el segundo hace lo mismo con los *Steak Burrito* ("frijoles pintos", en español). Como el primer resultado (282) es mayor que el segundo (105) podemos decir que es más frecuente que los burritos de pollo tengan frijoles negros a que tengan frijoles pinto.
@@ -267,13 +275,11 @@
 	- **Haga una lista de todos los archivos CSV o TSV en el repositorio del curso (usando un solo comando). Piense en cómo los caracteres comodín pueden ayudarte con esta tarea. Cuente el número aproximado de apariciones de la palabra "dictionary" (independientemente del caso) en todos los archivos del repositorio del curso.**
 	
 		Podemos listar todos los archivos *csv* o *tsv* con ayuda de los comodines:
-	```
-	find . -name *.?sv
-	```
+		```
+		find . -name *.?sv
+		```
 		
 		Podemos contar el número de aproximado de apariciones de la palabra *"dictionary"* (independientemente del caso) de la siguiente manera:
 		```
 		grep -ir "dictionary" . | wc -l
 		```
-	
-	
