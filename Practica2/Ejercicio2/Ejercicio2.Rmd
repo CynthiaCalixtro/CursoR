@@ -1,4 +1,5 @@
 Nombre: Cynthia Calixtro Ames 20150456D
+
 Respuesta2: Este documento busca explicar lo que es una función vectorizada en R y qué significa que obedezca la regla del reciclaje. 
 
 # Funciones en R
