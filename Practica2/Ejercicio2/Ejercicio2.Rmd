@@ -1,0 +1,47 @@
+Nombre: Cynthia Calixtro Ames 20150456D
+Respuesta2: Este documento busca explicar lo que es una función vectorizada en R y qué significa que obedezca la regla del reciclaje. 
+
+# Funciones en R
+
+## Vectorizada
+
+Una función es vectorizada si puede aceptar un vector como parametro de entrada. En el siguiente ejemplo, la función `MiFunVec` acepta tanto un número como un vector.
+
+```
+MiFunVec <- function(x)
+{
+  x**2
+}
+```
+
+Pásandole un número:
+
+```
+MiFunVec(3) #Retorna 9, esto es 3 elevado al cuadrado
+```
+
+Pásandole un vector numérico:
+
+```
+MiFunVec(1:5) #Retorna el vector (1,  4,  9, 16, 25). Es decir, eleva al cuadrado cada componente del vector 1:5
+```
+
+## Reciclaje
+
+Una función obedece la regla del reciclaje si acepta `recicling`. Esto es cuando R realiza una operación sobre dos vectores de diferente longitud. Veamos el siguiente ejemplo:
+
+```
+MiFunReci <- function(x,y)
+{
+	x + y
+}
+
+# Retorna el vector (2, 4, 4, 6, 6, 8). R "completa" el vector c(1,2) al realizar la suma
+# Es como si sumar (1,2,3,4,5,6) + (1,2,1,2,1,2) componente a componente
+MiFunReci(1:6,c(1,2)) 
+
+```
+
+
+
+
