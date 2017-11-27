@@ -1,10 +1,6 @@
 
 # Reporte del artículo "Impatient R"
 
-Contenido:
-
-[TOC]
-
 A continuación, presentamos un tutorial para aprender a programar en R. Antes de empezar, hay que tener en cuenta dos cosas:
 
 - Saltarse los elementos básicos con la idea de avanzar más rápido, casi siempre resulta todo lo contrario.
@@ -148,7 +144,7 @@ crea un vector de 9 números que se distribuyen uniformemente entre 0 y 1. Obten
 
 ### 4.4. Gráficos
 
-En R, también se puede crear un plot, lo cual veremos más adelante en la sección de [gráficos](#graficos).
+En R, también se puede crear un plot, lo cual veremos más adelante en la sección de gráficos.
 
 ## 5. Leyendo datos en R
 
@@ -258,7 +254,7 @@ el cual nos dará un rastreo de las funciones que estaban en efecto en el moment
 
 Si obtenemos un warning, deberemos ver si el mensaje mostrado por este nos advierte de un problema real o no.
 
-## 9. Gráficos {#graficos}
+## 9. Gráficos
 
 En R, un "dispositivo gráfico" es como un lienzo sobre el cual se dibujará. Si solo vamos a hacer gráficos de forma interactiva, no nos debemos preocupar por el dispositivo gráfico ya que R iniciará un dispositivo predeterminado. En cambio, si deseamos guardar gráficos para compartir, tendremos que decidir un dispositivo gráfico.
 
